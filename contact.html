@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Paws & Hope Animal Rescue</title>
+    <meta name="description" content="Contact Paws & Hope Animal Rescue or visit one of our locations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><span class="logo-mark">P&amp;H</span>Paws & Hope Animal Rescue</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="siteNav">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Animals</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <h1>Contact Us</h1>
+                    <p>Reach out with any questions, or visit us at one of our locations.</p>
+                </div>
+                <div class="hero-visual" aria-hidden="true">📍</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid grid-2">
+                    <div>
+                        <div class="contact-locations">
+                            <div class="card">
+                                <h3>Main Shelter</h3>
+                                <p>12 Hollyoak Road, Greenfield, 2196<br>Open Mon-Sat, 09:00-16:00<br>Tel: 011 555 0182</p>
+                            </div>
+                            <div class="card">
+                                <h3>Adoption &amp; Drop-off Point</h3>
+                                <p>Unit 4, Riverside Centre, Elm Street, Greenfield<br>Open Tue-Sun, 10:00-15:00<br>Tel: 011 555 0197</p>
+                            </div>
+                        </div>
+                        <div class="map-embed">Map placeholder — embed shows both the Main Shelter and Adoption &amp; Drop-off Point locations</div>
+                    </div>
+
+                    <form class="form-card" data-validate novalidate>
+                        <div class="form-group">
+                            <label for="cName">Full Name</label>
+                            <input type="text" id="cName" name="cName" required>
+                            <p class="field-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="cEmail">Email Address</label>
+                            <input type="email" id="cEmail" name="cEmail" required>
+                            <p class="field-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="cMessage">Message</label>
+                            <textarea id="cMessage" name="cMessage" required></textarea>
+                            <p class="field-error"></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p class="form-success" hidden>Thanks for reaching out — we'll respond within 2 business days.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <p class="footer-brand">Paws & Hope Animal Rescue</p>
+                <p>Rescuing, rehabilitating and rehoming animals in our community since 2016.</p>
+            </div>
+            <div class="footer-locations">
+                <div class="footer-location">
+                    <h4>Main Shelter</h4>
+                    <p>12 Hollyoak Road, Greenfield, 2196</p>
+                </div>
+                <div class="footer-location">
+                    <h4>Adoption &amp; Drop-off Point</h4>
+                    <p>Unit 4, Riverside Centre, Elm Street, Greenfield</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Paws & Hope Animal Rescue. All rights reserved. | Built for WEDE5020 Portfolio of Evidence.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+/* =========================================================
+   Paws & Hope Animal Rescue — style.css
+   WEDE5020 POE — Part 2: CSS Styling and Responsive Design
+   ========================================================= */
+
+/* -------------------------------
+   1. CSS Reset / Base Style
+   ------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #33302c;
+    background-color: #fffaf3;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* -------------------------------
+   2. Typography Scale
+   ------------------------------- */
+h1, h2, h3, h4 {
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #2b2620;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.75rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; }
+h4 { font-size: 1rem; margin-bottom: 0.35rem; font-weight: 600; }
+
+p { margin-bottom: 0.75rem; }
+p:last-child { margin-bottom: 0; }
+
+/* -------------------------------
+   3. Layout Helpers
+   ------------------------------- */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+section {
+    padding-block: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.section-alt {
+    background-color: #f3ece0;
+}
+
+.section-intro {
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+}
+
+.section-intro p { color: #5c574f; }
+
+.tag {
+    display: inline-block;
+    background-color: #ffe3b3;
+    color: #7a4b00;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+
+/* Grid system */
+.grid {
+    display: grid;
+    gap: 1.75rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* -------------------------------
+   4. Header & Navigation
+   ------------------------------- */
+.site-header {
+    background-color: #fffaf3;
+    border-bottom: 1px solid #ece3d3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2b2620;
+}
+
+.logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: #ff9d42;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.site-nav a {
+    font-weight: 600;
+    color: #5c574f;
+    padding-block: 0.25rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: #ff9d42;
+}
+
+.site-nav a.active {
+    color: #2b2620;
+    border-bottom-color: #ff9d42;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.4rem;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #2b2620;
+    border-radius: 2px;
+}
+
+/* -------------------------------
+   5. Hero
+   ------------------------------- */
+.hero {
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-inner p {
+    color: #5c574f;
+    max-width: 42ch;
+    margin-block: 1rem 1.5rem;
+}
+
+.hero-visual {
+    font-size: 6rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* -------------------------------
+   6. Cards
+   ------------------------------- */
+.card {
+    background-color: #fff;
+    border: 1px solid #ece3d3;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    box-shadow: 0 1px 2px rgba(43, 38, 32, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(43, 38, 32, 0.08);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    color: #5c574f;
+    font-size: 0.95rem;
+}
+
+/* -------------------------------
+   7. Buttons
+   ------------------------------- */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background-color: #ff9d42;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #e8860f;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2b2620;
+    border: 2px solid #2b2620;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background-color: #2b2620;
+    color: #fff;
+}
+
+/* -------------------------------
+   8. Forms
+   ------------------------------- */
+.form-card {
+    background-color: #fff;
+    border: 1px solid #ece3d3;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    max-width: 560px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid #d9d0bf;
+    border-radius: 0.4rem;
+    background-color: #fffaf3;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff9d42;
+    box-shadow: 0 0 0 3px rgba(255, 157, 66, 0.2);
+}
+
+.field-error {
+    color: #c0392b;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    min-height: 1em;
+}
+
+.form-success {
+    color: #2f6f3f;
+    background-color: #e6f4ea;
+    border-radius: 0.4rem;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------
+   9. Contact page specifics
+   ------------------------------- */
+.contact-locations {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.map-embed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f3ece0;
+    border: 1px dashed #d9d0bf;
+    border-radius: 0.75rem;
+    min-height: 200px;
+    padding: 1.5rem;
+    color: #5c574f;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------
+   10. Footer
+   ------------------------------- */
+.site-footer {
+    background-color: #2b2620;
+    color: #d9d0bf;
+    margin-top: 2.5rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-block: 3rem;
+}
+
+.footer-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.footer-locations {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.footer-location h4 {
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+
+.footer-location p {
+    font-size: 0.9rem;
+    color: #b8b0a1;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3d3830;
+    text-align: center;
+    padding-block: 1.25rem;
+    font-size: 0.8rem;
+    color: #b8b0a1;
+}
+
+/* =========================================================
+   11. Responsive Design
+   ========================================================= */
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-visual {
+        font-size: 4.5rem;
+    }
+
+    .footer-locations {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 640px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+
+    .site-nav.is-open {
+        display: block;
+    }
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding-block: 0.5rem 1rem;
+    }
+
+    .site-nav a {
+        display: block;
+        padding-block: 0.6rem;
+        border-bottom: 1px solid #ece3d3;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hero-visual {
+        order: -1;
+        font-size: 3.5rem;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 1.75rem;
+    }
+
+    .footer-locations {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+    }
+}

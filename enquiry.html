@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry | Paws & Hope Animal Rescue</title>
+    <meta name="description" content="Enquire about adoption, volunteering or sponsorship at Paws & Hope Animal Rescue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><span class="logo-mark">P&amp;H</span>Paws & Hope Animal Rescue</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="siteNav">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Animals</a></li>
+                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <h1>Make an Enquiry</h1>
+                    <p>Interested in adopting, volunteering or becoming a sponsor? Let us know below.</p>
+                </div>
+                <div class="hero-visual" aria-hidden="true">💌</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <form class="form-card" data-validate novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <p class="field-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <p class="field-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="enquiryType">I am enquiring about</label>
+                        <select id="enquiryType" name="enquiryType" required>
+                            <option value="">Please select...</option>
+                            <option value="adoption">Adopting an animal</option>
+                            <option value="volunteer">Becoming a volunteer</option>
+                            <option value="sponsor">Becoming a sponsor</option>
+                        </select>
+                        <p class="field-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us a bit about yourself and how you'd like to help..."></textarea>
+                        <p class="field-error"></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                    <p class="form-success" hidden>Thank you! Your enquiry has been received and our team will be in touch soon.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <p class="footer-brand">Paws & Hope Animal Rescue</p>
+                <p>Rescuing, rehabilitating and rehoming animals in our community since 2016.</p>
+            </div>
+            <div class="footer-locations">
+                <div class="footer-location">
+                    <h4>Main Shelter</h4>
+                    <p>12 Hollyoak Road, Greenfield, 2196</p>
+                </div>
+                <div class="footer-location">
+                    <h4>Adoption &amp; Drop-off Point</h4>
+                    <p>Unit 4, Riverside Centre, Elm Street, Greenfield</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Paws & Hope Animal Rescue. All rights reserved. | Built for WEDE5020 Portfolio of Evidence.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
